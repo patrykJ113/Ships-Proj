@@ -1,0 +1,63 @@
+.Display {
+    display: none;
+}
+.Container{
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+.Pagination{
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+}
+.PaginationItem{
+    height: 35px;
+    margin: 0 10px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid #1DFFE0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PaginationItem a {
+    color: #1DFFE0;
+    text-decoration: none;
+}
+.Checked{
+    background-color: #1DFFE0;
+}
+.Checked a {
+    color: black;
+}
+.Arow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    top: 5%;
+    right: -35%;
+    color:#1DFFE0 ;
+    cursor: pointer;
+}
+.Arow a:visited{
+    color: #1DFFE0 ;
+}
+.Arow:last-of-type{
+    top: 5%;
+    left: -35%;
+    transform: rotateZ(180deg);
+    /* background-color: gray; */
+}
+.Arow:last-of-type a:visited{
+    color: #1DFFE0 ;
+}

@@ -1,0 +1,117 @@
+:global(.Container){
+    position: fixed;
+    left: 30%;
+    top: 9%;
+    width: 100%;
+}
+.SerchBox{
+    margin-left: 40px;
+    background-color: white;
+    padding: 10px 15px;
+    width: 550px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+
+    position: relative;
+}
+.SerchBox input{
+    display: block;
+    border: none;
+    width: 250px;
+    outline: none;
+}
+.SerchBox p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.LoopIcon{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: #511348;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.LoopIcon:hover{
+    cursor: pointer;
+}
+.Green{
+    background-color: #1DFFE0;
+    color: black;
+}
+.ResultList{
+    width: inherit;
+    height: 190px;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    background-color: #FFF;
+    border-radius: 15px;
+    display: flex;
+    overflow-y: scroll;
+    visibility: hidden;
+}
+.ResultListVisible{
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1300px) {
+    :global(.Container){
+        position: absolute;
+        left: 0%;
+        top: 10%;
+        width: 100%;
+    }
+    .SerchBox{
+        margin-left: 0;
+        width: 97%;
+    }
+    
+}
+@media only screen and (max-width: 1200px) {
+    :global(.Container){
+        width: 100%;
+        left: 0;
+        
+    }
+    .SerchBox{
+        width: 97%;
+    }
+    
+    
+}
+@media only screen and (max-width: 1000px) {
+    :global(.Container){
+        left: 0;
+        top: 6.5%;
+    }
+    .SerchBox{
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    :global(.Container){
+        left: 0;
+        top: 6.5%;
+    }
+    .SerchBox{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    :global(.Container){
+        left: 0;
+        top: 4%;
+    }
+    .SerchBox{
+        width: 91%;
+    }
+}

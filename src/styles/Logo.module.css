@@ -1,0 +1,27 @@
+.Logo{
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    width: 100%;
+}
+
+.Img{
+    /* transform: scale(.8, 0.8); 
+     */
+     width: 300px;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+}
+@media only screen and (max-width: 980px) {
+    
+}
+@media only screen and (max-width: 980px) {
+    
+}
+@media only screen and (max-width: 550px) {
+    .Img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,199 @@
+.Container{
+  height: 100vh;
+  width: 23%;
+  /* background-color: #999; */
+  background-color: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  /* display:none; */
+}
+
+.Dot{
+  
+  background-color: #1DFFE0;
+
+  clip-path: circle(.5% at 50% 12%) ;
+  height: 100vh;
+  transition: clip-path .5s;
+  width: 25vw;
+
+  overflow-y: scroll;
+}
+.DotShowing {
+  clip-path: circle(75%);
+}
+.FavoriteButton{
+  height: 35px;
+  width: 35px;
+  background-color: #1DFFE0;
+  border-radius: 50%;
+  display: inline-block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform .3s;
+
+  position: fixed;
+  
+  top: 10.3%;
+  right: 9%;
+  z-index: 2;
+}
+.FavoriteButtonClicked{
+  background-color: #F5F5F5;
+}
+.FavoriteButton:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    background-color: #F5F5F5;
+}
+.FavoriteTitle{
+  margin-top: 150px;
+}
+.FavoriteItem{
+  
+  padding: .8rem 1.8rem;
+  border-radius: 30px 0 0 30px;
+  width: 65%;
+  height: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  transition: transform 3s;
+
+}
+.Link{
+  text-decoration: none;
+  color: black;
+}
+.link:visited{
+  color: black;
+}
+.FavoriteItem p{
+  margin-left: 15px;
+}
+.FavoriteItem:hover{
+  background-color: #EEEEEE;
+}
+.FavoriteItemImg{
+  /* transform: scale(.1, 0.1);  */
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  left: -6%;
+  border: 1px solid white;
+  
+}
+
+.TrashTransiotion{
+  transform: translateY(40px);
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .FavoriteButton{
+    top: 10.3%;
+    right: 12.1%;
+  }
+  .Dot{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    overflow-y: auto;
+    width: 27vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .FavoriteButton{
+    top: 10.4%;
+    right: 9.7%;
+  }
+  .Dot{
+    top: 0;
+    right: -6%;
+    width: 25vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .FavoriteButton{
+    top: 10.0%;
+    right: 10.8%;
+  }
+  .Dot{
+    /* top: 0;
+    right: -5%; */
+    width: 30vw;
+    clip-path: circle(.1% at 55% 12%) ;
+
+  }
+  .DotShowing {
+    clip-path: circle(75%);
+  }
+}
+@media only screen and (max-width: 850px) {
+  .FavoriteButton{
+    top: 90.0%;
+    right: 4%;
+  }
+  .Dot{
+    /* top: 0;
+    right: -5%; */
+    width: 30vw;
+    clip-path: circle(.1% at 60% 12%) ;
+
+  }
+  .DotShowing {
+    clip-path: circle(75%);
+  }
+}
+@media only screen and (max-width: 830px) {
+  .FavoriteButton{
+    top: 90.0%;
+    right: 2%;
+  }
+  .Dot{
+    width: 45vw;
+    clip-path: circle(1% at 87% 92%) ;
+
+  }
+  .DotShowing {
+    clip-path: circle(75%);
+    border-radius: 35px 0 0 35px ;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .FavoriteButton{
+    top: 90%;
+    right: 3%;
+  }
+  .Dot{
+    clip-path: circle(.2% at 93% 92%) ;
+    width: 92vw;
+    top: 0;
+    right: -5%;
+  }
+  .DotShowing {
+    clip-path: circle(80%);
+    border-radius: 35px 0 0 35px ;
+  }
+  .FavoriteTitle{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 10px;
+    text-align: left;
+  }
+  .FavoriteItem{
+    width: 75%;
+  }
+} 
+

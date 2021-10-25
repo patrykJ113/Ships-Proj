@@ -1,0 +1,28 @@
+.SerchResultUl{
+    padding: 0;
+    margin:0 ;
+    height: inherit;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    align-items: flex-start;
+}
+.SerchResultLi{
+    padding: 15px 20px;
+    
+    border-radius: 35px;
+    margin: 5px 10px;
+    transition: backgroundColor 1.3s;
+}
+.SerchResultLi:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+.Link{
+    text-decoration: none;
+    color: black;
+}
+.Link:visited , .Link:active{
+    color: black;
+}

@@ -1,0 +1,103 @@
+.CardsContainer{
+    margin-top: 150px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Card{
+    height: 680px;
+    /* width: 33%; */
+    background-image: linear-gradient(to top ,rgba(255,255,255,0),rgba(255,255,255,0.2));
+    border-radius: 25px;
+    box-sizing: border-box;
+    flex-basis: 33%;
+}
+.Img{
+    margin: 20px auto;
+    height: 300px;
+    width: 90%;
+    border-radius: 25px;
+    border: 2px solid #1DFFE0;
+}
+.Date{
+    color: #9F9F9F;
+    font-size: .8rem;
+    text-align: left;    
+    width: 90%;
+    margin: 0px auto;
+}
+.Title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: #34FFC8;
+    text-align: left;    
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.Description{
+    text-align: left; 
+    color: #FFFFFFDE;
+    width: 90%;
+    margin: 0px auto;
+    overflow-y: hidden;
+    height: 110px;
+    
+}
+.Button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    offset: none;
+    border: 2px solid #1DFFE0;
+    color: #1DFFE0;
+    margin-top: 35px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+}
+.Button:hover{
+    background-color: #1DFFE0;
+    color: black;
+    cursor: pointer;
+}
+
+.Fav{
+  height: 45px;
+  width: 45px;
+  color: #1DFFE0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px silod #1DFFE0;
+  
+}
+.Svg{
+    width: 25px;
+    height: 25px;
+}
+.Fav:hover .Svg{
+    width: 29px;
+    height: 29px;
+}
+.FavSelected{
+    color: #1DFFE0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .Card{
+        flex-basis: 49%;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .Card{
+        flex-basis: 98%;
+    }
+  }
+
+
