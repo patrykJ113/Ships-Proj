@@ -35,7 +35,7 @@ export default function Pagination({ postsPerPage, totalPosts, paginate , pageNu
     }
 
     return (
-        <nav className={`${Styles.Container} ${loading ? '' : Styles.Display }`}>
+        <nav className={`${Styles.Container} ${!loading ? '' : Styles.Display }`}>
             <div className={Styles.Arow}>
                 <Link to={`/page/${totalNumberOfPageItems}`} onClick={() => paginate(totalNumberOfPageItems)}>
                     <IoChevronForwardSharp />

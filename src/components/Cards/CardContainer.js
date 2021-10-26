@@ -8,6 +8,17 @@ export default function CardContainer({ships , loading}) {
     if (loading) {
         return (
             <div className={Styles.CardsContainer}>
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+            </div>
+        );
+    } else {
+        return (
+            <div className={Styles.CardsContainer}>
                 {
                     ships.map(ship => {
                             return (
@@ -17,21 +28,11 @@ export default function CardContainer({ships , loading}) {
                                         flickr_images={ship.links.flickr_images[0]}
                                         launch_date_utc ={new Date(ship.launch_date_utc).toLocaleDateString("en-BZ")}
                                         id={ship.id}
-                                        article_link={ship.links.article_link}/>
+                                        article_link={ship.links.article_link}
+                                        favorite={ship.favorite}/>
                                          )
                     })
                 }
-            </div>
-        );
-    } else {
-        return (
-            <div className={Styles.CardsContainer}>
-                <Skeleton />
-                <Skeleton />
-                <Skeleton />
-                <Skeleton />
-                <Skeleton />
-                <Skeleton />
             </div>
         );
     }

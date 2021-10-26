@@ -7,11 +7,19 @@ import { FaRegHeart } from 'react-icons/fa';
 import { IoMdClose } from "react-icons/io";
 import { FaTrashAlt } from 'react-icons/fa';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { delateFromFavorites } from '../../Redux/Ships/ShipActions';
+
 export default function FavoriteButton() {
 
   const [isCiicked , setIsClicked] = useState(false);  
   // const [ favorites, setFavorites] = useState(false);  
-  const ships = useContext(ShipContext);
+
+  // const ships = useContext(ShipContext);
+
+  const ships = useSelector(state => state.ships);
+  const dispatch = useDispatch();
+
 
   const delateFromFavs = (id) =>{
     ships.forEach(val =>{
@@ -31,7 +39,7 @@ const favorites = ships.map(ship =>{
             <img src={ship.links.flickr_images[0]} className={Styles.FavoriteItemImg} alt='ship'></img>
             <p>{ship.mission_name}</p>
           </a>
-          <FaTrashAlt onClick={() => delateFromFavs(ship.id)}/>
+          <FaTrashAlt onClick={() => dispatch(delateFromFavorites(ship.id))}/>
           
         </div>
   

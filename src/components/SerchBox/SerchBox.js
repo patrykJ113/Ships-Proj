@@ -5,7 +5,10 @@ import SerchResults from './SerchResults';
 import { FaSearch } from 'react-icons/fa';
 import { IoMdClose } from "react-icons/io";
 
-export default function SerchBox({serchedShipsFunc , loading}) { 
+import { serchShips } from '../../Redux/Ships/ShipActions';
+import { useDispatch } from 'react-redux'
+
+export default function SerchBox({ loading}) { 
 
     const inputRef = useRef(null);
     const serchedShips = [];
@@ -13,32 +16,35 @@ export default function SerchBox({serchedShipsFunc , loading}) {
     const [visible , setVisible ] = useState(false);
     const [icon , setIcon ] = useState(false);
 
-    const ships = useContext(ShipContext);
+    const dispatch = useDispatch();
 
-    const serchShips = value => {
 
-        if(value !== ''){
-            setIcon(true);
-            ships.forEach(ship =>{
-                if(ship.mission_name.toUpperCase().includes(value.toUpperCase())){
-    
-                    serchedShips.push(ship);
-                }
-            })
-        }else{
-            setIcon(false);
-            serchedShipsFunc(null,true,value);
-        }
+    // const ships = useContext(ShipContext);
 
-        if(serchedShips.length > 0){
-            setX(serchedShips);
-            serchedShipsFunc(serchedShips,false,value);
-            setVisible(true);
-        }else{
-            setVisible(false);
-            serchedShipsFunc(null,false,value)
-        }
-      }  
+    // const serchShips = value => {
+
+    //     if(value !== ''){
+    //         setIcon(true);
+    //         ships.forEach(ship =>{
+    //             if(ship.mission_name.toUpperCase().includes(value.toUpperCase())){
+                    
+    //                 serchedShips.push(ship);
+    //             }
+    //         })
+    //     }else{
+    //         setIcon(false);
+    //         // serchedShipsFunc(null,true,value);
+    //     }
+
+    //     if(serchedShips.length > 0){
+    //         setX(serchedShips);
+    //         // serchedShipsFunc(serchedShips,false,value);
+    //         setVisible(true);
+    //     }else{
+    //         setVisible(false);
+    //         // serchedShipsFunc(null,false,value)
+    //     }
+    //   }  
 
     const hideResults = () =>{
         setVisible(false);
@@ -49,7 +55,7 @@ export default function SerchBox({serchedShipsFunc , loading}) {
             setVisible(false);
             inputRef.current.value = '';
             setIcon(false);
-            serchedShipsFunc(ships,false,null);
+            // serchedShipsFunc(ships,false,null);
         }
     }
 
@@ -58,7 +64,7 @@ export default function SerchBox({serchedShipsFunc , loading}) {
             <div className={Styles.SerchBox}>
                 <div>
                     <p>SERCH FOR A SHIP</p>
-                    <input placeholder='Enter a model' ref={inputRef} onChange={() => serchShips(inputRef.current.value)} disabled={!loading}></input>
+                    <input placeholder='Enter a model' ref={inputRef} onChange={() => dispatch(serchShips(inputRef.current.value))} disabled={loading}></input>
                 </div>
 
                 <div className={`${Styles.LoopIcon} ${icon && Styles.Green}`} onClick={Close}>
