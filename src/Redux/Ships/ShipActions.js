@@ -5,7 +5,8 @@ import {
     FETCH_SHIPS_ERROR,
     ADD_TO_FAVORITES,
     DELATE_FROM_FAVORITES,
-    SERCH_SHIPS
+    SERCH_SHIPS,
+    STOP_SERCHING_SHIPS
  } from './ShipTypes'
 
 export const fetchShips = () => {
@@ -45,6 +46,12 @@ export const serchShips = serchString =>{
   return{
     type: SERCH_SHIPS,
     payload:serchString
+  }
+}
+
+export const stopSerchingShips = () =>{
+  return{
+    type: STOP_SERCHING_SHIPS
   }
 }
   

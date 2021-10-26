@@ -7,7 +7,7 @@ export default function Logo({setCurrentPage}) {
   return (
     <div className={Styles.Logo}>
         <Link to={`/`} >
-          <img src={logo} className={Styles.Img}></img>
+          <img src={logo} className={Styles.Img} alt="Ships"></img>
         </Link>
     </div>
   );

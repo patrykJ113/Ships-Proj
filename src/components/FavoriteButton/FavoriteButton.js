@@ -1,7 +1,5 @@
 import React ,{useState} from 'react';
 import Styles from '../../styles/FavoriteButton.module.css';
-import { useContext } from 'react';
-import { ShipContext } from '../../App';
 
 import { FaRegHeart } from 'react-icons/fa';
 import { IoMdClose } from "react-icons/io";
@@ -13,28 +11,17 @@ import { delateFromFavorites } from '../../Redux/Ships/ShipActions';
 export default function FavoriteButton() {
 
   const [isCiicked , setIsClicked] = useState(false);  
-  // const [ favorites, setFavorites] = useState(false);  
 
-  // const ships = useContext(ShipContext);
 
   const ships = useSelector(state => state.ships);
   const dispatch = useDispatch();
 
-
-  const delateFromFavs = (id) =>{
-    ships.forEach(val =>{
-      if(val.id == id) {
-        val.favorite = false ;
-      }
-
-    })
-  }
   
 
 const favorites = ships.map(ship =>{
   if(ship.favorite){
     return (
-        <div className={`${Styles.FavoriteItem}`}>
+        <div className={`${Styles.FavoriteItem}`} key={ship.id}>
           <a className={Styles.Link} href={ship.links.article_link}>
             <img src={ship.links.flickr_images[0]} className={Styles.FavoriteItemImg} alt='ship'></img>
             <p>{ship.mission_name}</p>

@@ -7,7 +7,6 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 export default function Pagination({ postsPerPage, totalPosts, paginate , pageNumber , loading}) {
 
     const pageNumbers = [];
-    // const displayedNumbers = [];
 
     const totalNumberOfPageItems = Math.ceil(totalPosts / postsPerPage);
     if(3 > totalNumberOfPageItems){
@@ -43,7 +42,7 @@ export default function Pagination({ postsPerPage, totalPosts, paginate , pageNu
             </div>
             <ul className={Styles.Pagination}>
                 {pageNumbers.map(number => (
-                    <li key={number} className={`${Styles.PaginationItem} ${number == pageNumber ? Styles.Checked : ''}`} >
+                    <li key={number} className={`${Styles.PaginationItem} ${number === pageNumber ? Styles.Checked : ''}`} >
                         <Link to={`/page/${number}`} onClick={() => paginate(number)}>{number}</Link>
                     </li>
                 ))}

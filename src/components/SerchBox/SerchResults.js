@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from '../../styles/SerchResults.module.css';
-import { Link } from 'react-router-dom';
 
 
 export default function SerchResults({ ships , hideResults}) {

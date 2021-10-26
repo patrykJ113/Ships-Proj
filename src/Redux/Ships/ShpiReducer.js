@@ -4,7 +4,8 @@ import {
     FETCH_SHIPS_ERROR,
     ADD_TO_FAVORITES,
     DELATE_FROM_FAVORITES,
-    SERCH_SHIPS
+    SERCH_SHIPS,
+    STOP_SERCHING_SHIPS
  } from './ShipTypes'
 
 const initialState = {
@@ -12,7 +13,8 @@ const initialState = {
     noResults:false,
     ships:[],
     serchedShips:[],
-    error:''
+    error:'',
+    shipSLength:0
   }
 
 const shipsReducer = (state = initialState, action) =>{
@@ -75,13 +77,15 @@ const shipsReducer = (state = initialState, action) =>{
             return {
               ...state,
               serchedShips:filterdShips,
-              noResults:false
+              noResults:false,
+              shipSLength:filterdShips.length
             }
           }else{
             return{
               ...state,
               serchedShips:[],
-              noResults:true
+              noResults:true,
+              shipSLength:0
             }
           }
           
@@ -89,9 +93,18 @@ const shipsReducer = (state = initialState, action) =>{
           return{
             ...state,
             serchedShips:[],
-            noResults:false
+            noResults:false,
+            shipSLength:0
           }
         }
+
+      case STOP_SERCHING_SHIPS:
+        return{
+          ...state,
+          serchedShips:[],
+          noResults:false,
+          shipSLength:0
+        }  
 
       default :
         return state ;
