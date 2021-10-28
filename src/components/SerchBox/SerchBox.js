@@ -7,8 +7,9 @@ import { IoMdClose } from "react-icons/io";
 import { serchShips } from '../../Redux/Ships/ShipActions';
 import { stopSerchingShips } from '../../Redux/Ships/ShipActions';
 import { useDispatch ,useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-export default function SerchBox({loading}) { 
+export default function SerchBox({loading , paginate}) { 
 
     const inputRef = useRef(null);
     
@@ -48,14 +49,21 @@ export default function SerchBox({loading}) {
             <div className={Styles.SerchBox}>
                 <div>
                     <p>SERCH FOR A SHIP</p>
-                    <input placeholder='Enter a model' 
+                    <Link to={{
+                        pathname:'/',
+                        state:{home:true}
+                        }} 
+                        style={{textDecoration:'none'}}>
+
+                        <input placeholder='Enter a model' 
                            ref={inputRef} 
                            onChange={() => {
                                dispatch(serchShips(inputRef.current.value));
                                toogleResults(inputRef.current.value );
                             }} 
                            disabled={loading}>
-                    </input>
+                        </input>
+                    </Link>
                 </div>
 
                 <div className={`${Styles.LoopIcon} ${icon && Styles.Green}`} onClick={() => {

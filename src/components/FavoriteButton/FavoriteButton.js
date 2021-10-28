@@ -8,13 +8,9 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { delateFromFavorites } from '../../Redux/Ships/ShipActions';
 
-import '../../styles/TransitionGroup/FavoriteButton.css';
-import { CSSTransition } from 'react-transition-group';
-
 export default function FavoriteButton() {
 
   const [isCiicked , setIsClicked] = useState(false);  
-
 
   const ships = useSelector(state => state.ships);
   const dispatch = useDispatch();
@@ -33,15 +29,13 @@ const favorites = ships.map(ship =>{
     )
   }
 })
+const logMouse = () => {
+  console.log('mouse ');
+}
 
   return (
     <>
-        <CSSTransition
-          in={ships}
-          timeout={1000}
-          classNames='Fade'>
-
-          <div className={`${Styles.Container} ${isCiicked && Styles.ContainerVisible}`}>
+          <div className={Styles.Container} onMouseOver={logMouse}>
             <div className={`${Styles.FavoriteButton} ${isCiicked && Styles.FavoriteButtonClicked}`} onClick={()=>setIsClicked(!isCiicked)}>
                 {isCiicked ? <IoMdClose/> : <FaRegHeart/>}
             </div>
@@ -51,7 +45,6 @@ const favorites = ships.map(ship =>{
                 {favorites}
             </div>
           </div>
-        </CSSTransition>
     </>
   );
 }

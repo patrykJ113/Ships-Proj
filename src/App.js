@@ -53,6 +53,7 @@ function App({fetch}) {
                         pageNumber={currentPage}
                         loading={loading}
                         />}
+                        <Header Margin={noResults} loading={loading} paginate={paginate}/> 
                     </Route>
 
                     <Route path='/page/:id' >
@@ -64,17 +65,18 @@ function App({fetch}) {
                         pageNumber={currentPage}
                         loading={loading}
                         />}
+                        <Header Margin={noResults} loading={loading} paginate={paginate}/> 
                     </Route>
                     <Route path='/ship/:id' >
                       <Ship />
                     </Route>
                     <Route path="*">
-                      <h1>No match</h1>
+                      <NoResults/>
                     </Route>
 
                 </Switch>
                 
-                <Header Margin={noResults} loading={loading}/> 
+                
                 <FavoriteButton/>
             </div>
         </div>

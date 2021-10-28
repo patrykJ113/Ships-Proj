@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { Link , useParams , useLocation} from 'react-router-dom';
 import Styles from '../../styles/Pagination.module.css';
 
 import { IoChevronForwardSharp } from "react-icons/io5";
@@ -7,6 +7,19 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 export default function Pagination({ postsPerPage, totalPosts, paginate , pageNumber , loading}) {
 
     const pageNumbers = [];
+    const { id } = useParams();
+    let location = useLocation();
+    useEffect(()=>{
+        if(id) {
+            paginate(id);
+           
+        }
+        if(location.state){
+            if('home' in location.state){
+                paginate(1);
+            }
+        }
+    },id);
 
     const totalNumberOfPageItems = Math.ceil(totalPosts / postsPerPage);
     if(3 > totalNumberOfPageItems){
@@ -24,8 +37,9 @@ export default function Pagination({ postsPerPage, totalPosts, paginate , pageNu
             pageNumbers.push(i);
         } 
     }else {
-        let x = pageNumber + 1;
-        let i = pageNumber - 1;
+        let x = parseInt(pageNumber) + 1;
+        let i = parseInt(pageNumber) - 1;
+
         for(i ; i<=x ; i++){
             if(i <= totalNumberOfPageItems){
                 pageNumbers.push(i);
@@ -42,7 +56,7 @@ export default function Pagination({ postsPerPage, totalPosts, paginate , pageNu
             </div>
             <ul className={Styles.Pagination}>
                 {pageNumbers.map(number => (
-                    <li key={number} className={`${Styles.PaginationItem} ${number === pageNumber ? Styles.Checked : ''}`} >
+                    <li key={number} className={`${Styles.PaginationItem} ${(id == number || number === pageNumber)? Styles.Checked : ''}`} >
                         <Link to={`/page/${number}`} onClick={() => paginate(number)}>{number}</Link>
                     </li>
                 ))}

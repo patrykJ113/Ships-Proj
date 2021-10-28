@@ -2,15 +2,19 @@
 
   .Fade-enter {
     opacity: 0;
+    background-color: red;
   }
   .Fade-enter-active {
     opacity: 1;
+    background-color: red;
     transition: opacity 500s;
   }
   .Fade-exit {
+    background-color: red;
     opacity: 1;
   }
   .Fade-exit-active {
     opacity: 0;
+    background-color: red;
     transition: opacity 500ms;
   }
