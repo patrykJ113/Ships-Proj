@@ -29,13 +29,10 @@ const favorites = ships.map(ship =>{
     )
   }
 })
-const logMouse = () => {
-  console.log('mouse ');
-}
 
   return (
     <>
-          <div className={Styles.Container} onMouseOver={logMouse}>
+          <div className={Styles.Container}>
             <div className={`${Styles.FavoriteButton} ${isCiicked && Styles.FavoriteButtonClicked}`} onClick={()=>setIsClicked(!isCiicked)}>
                 {isCiicked ? <IoMdClose/> : <FaRegHeart/>}
             </div>

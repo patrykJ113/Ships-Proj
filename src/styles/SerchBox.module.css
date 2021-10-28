@@ -16,6 +16,10 @@
 
     position: relative;
 }
+
+.NoResults{
+    
+}
 .SerchBox input{
     display: block;
     border: none;
@@ -73,6 +77,9 @@
         margin-left: 0;
         width: 97%;
     }
+    .NoResults{
+        top: 19.1%;
+    }
     
 }
 @media only screen and (max-width: 1200px) {
@@ -84,7 +91,9 @@
     .SerchBox{
         width: 97%;
     }
-    
+    .NoResults{
+        top: 19.1%;
+    }
     
 }
 @media only screen and (max-width: 1000px) {
@@ -94,6 +103,9 @@
     }
     .SerchBox{
         width: 96%;
+    }
+    .NoResults{
+        top:17.5%;
     }
 }
 
@@ -105,6 +117,9 @@
     .SerchBox{
         width: 95%;
     }
+    .NoResults{
+        top:17.5%;
+    }
 }
 @media only screen and (max-width: 600px) {
     :global(.Container){
@@ -113,5 +128,8 @@
     }
     .SerchBox{
         width: 91%;
+    }
+    .NoResults{
+        top:19.8%;
     }
 }

@@ -53,7 +53,7 @@ function App({fetch}) {
                         pageNumber={currentPage}
                         loading={loading}
                         />}
-                        <Header Margin={noResults} loading={loading} paginate={paginate}/> 
+                        <Header Margin={noResults} loading={loading} paginate={paginate} /> 
                     </Route>
 
                     <Route path='/page/:id' >

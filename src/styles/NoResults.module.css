@@ -3,7 +3,40 @@
     position: relative;
 }
 .Img{
-    margin-top: 50px;
-    width: 40%;
-
+    margin-top: 150px;
+    width: 15%;
+    height: 15%;
+    color: #1DFFE0;
+}
+.Text{
+    color: #1DFFE0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+}
+@media only screen and (max-width: 1200px) {
+    .Img{
+        margin-top: 150px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .Img{
+        margin-top: 120px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .Img{
+        margin-top: 100px;
+        width: 35%;
+        height: 35%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Img{
+        margin-top: 100px;
+        width: 45%;
+        height: 45%;
+    }
+    .Text{
+        font-size: 2rem;
+    }
 }

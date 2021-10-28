@@ -9,6 +9,7 @@ import { stopSerchingShips } from '../../Redux/Ships/ShipActions';
 import { useDispatch ,useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
 export default function SerchBox({loading , paginate}) { 
 
     const inputRef = useRef(null);
@@ -20,7 +21,6 @@ export default function SerchBox({loading , paginate}) {
     const serchedShips = useSelector(state => state.serchedShips);
     const noResults = useSelector(state => state.noResults);
     const shipSLength = useSelector(state => state.shipSLength);
-
 
 
     const hideResults = () =>{
@@ -45,7 +45,7 @@ export default function SerchBox({loading , paginate}) {
       }  
 
     return (
-        <div className='Container'>
+        <div className={`Container ${noResults && Styles.NoResults}`}>
             <div className={Styles.SerchBox}>
                 <div>
                     <p>SERCH FOR A SHIP</p>
