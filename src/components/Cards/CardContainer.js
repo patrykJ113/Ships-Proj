@@ -3,7 +3,9 @@ import Styles from '../../styles/Cards.module.css'
 import Skeleton from '../Skeleton/Skeleton';
 import Card from './Card';
 
+
 export default function CardContainer({ships , loading}) {
+
     
     if (loading) {
         return (

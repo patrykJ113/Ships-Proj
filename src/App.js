@@ -11,8 +11,7 @@ import Pagination from './components/Pagination/Pagination';
 import Ship from './components/Ship/Ship';
 import Logo from './components/Logo/Logo';
 import FavoriteButton from './components/FavoriteButton/FavoriteButton';
-import NoResults from './components/NoResults/NoResults'
-
+import NoResults from './components/NoResults/NoResults';
 
 export const ShipContext = React.createContext();
 export const FavoriteContext = React.createContext();
@@ -26,10 +25,8 @@ function App({fetch}) {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [shipsPerPage] = useState(6);
-
   
-
-  useEffect(() => { fetch() }, [])
+  useEffect(() => { fetch() }, []);
 
   ships = serchedShips.length > 0 ? serchedShips : ships;
 
@@ -38,7 +35,7 @@ function App({fetch}) {
   const currentShips= ships.slice(indexOfFirstShip, indexOfLastShip);
 
   
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const paginate = pageNumber => setCurrentPage(pageNumber) ;
 
   return (
     <BrowserRouter>
@@ -71,6 +68,10 @@ function App({fetch}) {
                     <Route path='/ship/:id' >
                       <Ship />
                     </Route>
+                    <Route path="*">
+                      <h1>No match</h1>
+                    </Route>
+
                 </Switch>
                 
                 <Header Margin={noResults} loading={loading}/> 

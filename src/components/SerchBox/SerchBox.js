@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 
 import { serchShips } from '../../Redux/Ships/ShipActions';
 import { stopSerchingShips } from '../../Redux/Ships/ShipActions';
-import { useDispatch ,useSelector } from 'react-redux'
+import { useDispatch ,useSelector } from 'react-redux';
 
 export default function SerchBox({loading}) { 
 

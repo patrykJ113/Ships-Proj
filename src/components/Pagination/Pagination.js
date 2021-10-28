@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Styles from '../../styles/Pagination.module.css'
+import Styles from '../../styles/Pagination.module.css';
 
 import { IoChevronForwardSharp } from "react-icons/io5";
 

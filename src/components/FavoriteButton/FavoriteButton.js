@@ -8,6 +8,9 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { delateFromFavorites } from '../../Redux/Ships/ShipActions';
 
+import '../../styles/TransitionGroup/FavoriteButton.css';
+import { CSSTransition } from 'react-transition-group';
+
 export default function FavoriteButton() {
 
   const [isCiicked , setIsClicked] = useState(false);  
@@ -15,7 +18,6 @@ export default function FavoriteButton() {
 
   const ships = useSelector(state => state.ships);
   const dispatch = useDispatch();
-
   
 
 const favorites = ships.map(ship =>{
@@ -27,27 +29,29 @@ const favorites = ships.map(ship =>{
             <p>{ship.mission_name}</p>
           </a>
           <FaTrashAlt onClick={() => dispatch(delateFromFavorites(ship.id))}/>
-          
         </div>
-  
     )
   }
 })
 
   return (
     <>
-        
+        <CSSTransition
+          in={ships}
+          timeout={1000}
+          classNames='Fade'>
 
-        <div className={`${Styles.Container} ${isCiicked && Styles.ContainerVisible}`}>
-          <div className={`${Styles.FavoriteButton} ${isCiicked && Styles.FavoriteButtonClicked}`} onClick={()=>setIsClicked(!isCiicked)}>
-              {isCiicked ? <IoMdClose/> : <FaRegHeart/>}
-          </div>
+          <div className={`${Styles.Container} ${isCiicked && Styles.ContainerVisible}`}>
+            <div className={`${Styles.FavoriteButton} ${isCiicked && Styles.FavoriteButtonClicked}`} onClick={()=>setIsClicked(!isCiicked)}>
+                {isCiicked ? <IoMdClose/> : <FaRegHeart/>}
+            </div>
 
-          <div className={`${Styles.Dot} ${isCiicked && Styles.DotShowing }`}>
-              <h1 className={Styles.FavoriteTitle}>Ulubione</h1>
-              {favorites}
+            <div className={`${Styles.Dot} ${isCiicked && Styles.DotShowing }`}>
+                <h1 className={Styles.FavoriteTitle}>Ulubione</h1>
+                {favorites}
+            </div>
           </div>
-        </div>
+        </CSSTransition>
     </>
   );
 }

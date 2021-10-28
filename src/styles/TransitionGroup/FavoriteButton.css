@@ -1,0 +1,16 @@
+
+
+  .Fade-enter {
+    opacity: 0;
+  }
+  .Fade-enter-active {
+    opacity: 1;
+    transition: opacity 500s;
+  }
+  .Fade-exit {
+    opacity: 1;
+  }
+  .Fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
