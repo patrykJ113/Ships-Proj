@@ -23,7 +23,7 @@
 .SerchBox input{
     display: block;
     border: none;
-    width: 250px;
+    width: 100%;
     outline: none;
 }
 .SerchBox p {

@@ -14,7 +14,6 @@ export default function FavoriteButton() {
 
   const ships = useSelector(state => state.ships);
   const dispatch = useDispatch();
-  
 
 const favorites = ships.map(ship =>{
   if(ship.favorite){
@@ -38,8 +37,8 @@ const favorites = ships.map(ship =>{
             </div>
 
             <div className={`${Styles.Dot} ${isCiicked && Styles.DotShowing }`}>
-                <h1 className={Styles.FavoriteTitle}>Ulubione</h1>
-                {favorites}
+                <h1 className={Styles.FavoriteTitle}>Ulubione</h1>                        
+                  {favorites}
             </div>
           </div>
     </>

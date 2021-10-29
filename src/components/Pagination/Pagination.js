@@ -19,7 +19,7 @@ export default function Pagination({ postsPerPage, totalPosts, paginate , pageNu
                 paginate(1);
             }
         }
-    },id);
+    },[id]);
 
     const totalNumberOfPageItems = Math.ceil(totalPosts / postsPerPage);
     if(3 > totalNumberOfPageItems){

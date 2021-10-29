@@ -13,6 +13,11 @@
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
 }
+@media only screen and (min-width: 1200px) {
+    .Img{
+        margin-top: 130px;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .Img{
         margin-top: 150px;
@@ -25,7 +30,7 @@
 }
 @media only screen and (max-width: 850px) {
     .Img{
-        margin-top: 100px;
+        margin-top: 120px;
         width: 35%;
         height: 35%;
     }
