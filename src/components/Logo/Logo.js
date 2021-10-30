@@ -6,7 +6,7 @@ import Styles from '../../styles/Logo.module.css'
 export default function Logo({setCurrentPage}) {
   return (
     <div className={Styles.Logo}>
-        <Link to={`/`} >
+        <Link to={{pathname:'/',state:{home:true}}} >
           <img src={logo} className={Styles.Img} alt="Ships"></img>
         </Link>
     </div>

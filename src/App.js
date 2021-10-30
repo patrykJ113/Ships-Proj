@@ -5,13 +5,11 @@ import { connect , useSelector } from 'react-redux';
 
 import { fetch } from './Redux/Ships/ShipActions'
 
-import Header from './components/Heder';
-import CardContainer from './components/Cards/CardContainer';
-import Pagination from './components/Pagination/Pagination';
-import Ship from './components/Ship/Ship';
 import Logo from './components/Logo/Logo';
 import FavoriteButton from './components/FavoriteButton/FavoriteButton';
 import NoResults from './components/NoResults/NoResults';
+
+import MainCommponent from './components/Main/MainCommponent';
 
 export const ShipContext = React.createContext();
 export const FavoriteContext = React.createContext();
@@ -45,31 +43,27 @@ function App({fetch}) {
 
                 <Switch>
                     <Route path='/' exact>
-                        {noResults ? <NoResults/>  : <CardContainer ships={currentShips} loading={loading}/>}
-                        {noResults ? '' :<Pagination
-                        postsPerPage={shipsPerPage}
-                        totalPosts={ships.length}
-                        paginate={paginate}
-                        pageNumber={currentPage}
-                        loading={loading}
-                        />}
-                        <Header Margin={noResults} loading={loading} paginate={paginate} /> 
+                        <MainCommponent noResults={noResults} 
+                                        currentShips={currentShips} 
+                                        loading={loading} 
+                                        shipsPerPage={shipsPerPage} 
+                                        shipsLength={ships.length} 
+                                        paginate={paginate}
+                                        currentPage={currentPage}>
+                        </MainCommponent>
                     </Route>
 
                     <Route path='/page/:id' >
-                        {noResults ? <NoResults/>  : <CardContainer ships={currentShips} loading={loading}/>}
-                        {noResults ? '' :<Pagination
-                        postsPerPage={shipsPerPage}
-                        totalPosts={ships.length}
-                        paginate={paginate}
-                        pageNumber={currentPage}
-                        loading={loading}
-                        />}
-                        <Header Margin={noResults} loading={loading} paginate={paginate}/> 
+                        <MainCommponent noResults={noResults} 
+                                        currentShips={currentShips} 
+                                        loading={loading} 
+                                        shipsPerPage={shipsPerPage} 
+                                        shipsLength={ships.length} 
+                                        paginate={paginate}
+                                        currentPage={currentPage}>
+                        </MainCommponent>
                     </Route>
-                    <Route path='/ship/:id' >
-                      <Ship />
-                    </Route>
+
                     <Route path="*">
                       <NoResults/>
                     </Route>

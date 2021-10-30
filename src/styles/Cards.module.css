@@ -2,12 +2,13 @@
     margin-top: 150px;
     display: flex;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .Card{
     height: 680px;
     /* width: 33%; */
+    margin: 0 2px;
     background-image: linear-gradient(to top ,rgba(255,255,255,0),rgba(255,255,255,0.2));
     border-radius: 25px;
     box-sizing: border-box;
