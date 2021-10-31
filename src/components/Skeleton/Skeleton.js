@@ -5,7 +5,7 @@ import SkeletonStyles from '../../styles/Skeleton.module.css';
 export default function Skeleton() {
   return (
     <div className={CardStyles.Card}>
-        <div className={`${CardStyles.Img} ${SkeletonStyles.Skeleton}`}></div>
+        <div className={`${SkeletonStyles.Img} ${SkeletonStyles.Skeleton}`}></div>
 
         <div className={`${CardStyles.Title} ${SkeletonStyles.Skeleton}`}></div>
 

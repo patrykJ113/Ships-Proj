@@ -7,7 +7,6 @@
 }
 .Card{
     height: 680px;
-    /* width: 33%; */
     margin: 0 2px;
     background-image: linear-gradient(to top ,rgba(255,255,255,0),rgba(255,255,255,0.2));
     border-radius: 25px;
@@ -20,7 +19,36 @@
     width: 90%;
     border-radius: 25px;
     border: 2px solid #1DFFE0;
+    display: none;
 }
+.Visible{
+    display: block;
+}
+.Hiden{
+    display: none;
+}
+/* ------------------------------------------------ */
+.ImgSkeleton{
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+    margin: 20px auto;
+    height: 300px;
+    width: 90%;
+    border-radius: 25px;
+    border: 2px solid #1DFFE0;
+}
+
+@keyframes skeleton-loading {
+    0% {
+      background-color:#815EAB;
+    }
+  
+    100% {
+      background-color: #5C437A;
+    }
+  }
+  
+  /* ------------------------------------------------ */
 .Date{
     color: #9F9F9F;
     font-size: .8rem;

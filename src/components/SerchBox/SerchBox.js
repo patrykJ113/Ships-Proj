@@ -16,10 +16,6 @@ export default function SerchBox({loading , paginate}) {
     
     const [visible , setVisible ] = useState(false);
     const [icon , setIcon ] = useState(false);
-    const [to , setTo] = useState({
-        pathname:'/',
-        state:{home:true}
-        });
 
     const dispatch = useDispatch();
     const serchedShips = useSelector(state => state.serchedShips);
@@ -47,26 +43,17 @@ export default function SerchBox({loading , paginate}) {
             setIcon(false);
         }
       }  
-    
-    const setLinkToPaaram = () => {
-        if(inputRef.current.value == ''){
-            setTo({
-                pathname:'/',
-                state:{home:true}
-                });
-        }else{
-            setTo({});
-        }
-    }  
 
     return (
         <div className={`Container ${noResults && Styles.NoResults}`}>
             <div className={Styles.SerchBox}>
                 <div>
                     <p>SERCH FOR A SHIP</p>
-                    <Link to={to}
-                          onClick={setLinkToPaaram} 
-                          style={{textDecoration:'none'}}>
+                    <Link to={{
+                        pathname:'/',
+                        state:{home:true}
+                        }} 
+                        style={{textDecoration:'none'}}>
 
                         <input placeholder='Enter a model' 
                            ref={inputRef} 
