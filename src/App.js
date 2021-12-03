@@ -42,6 +42,14 @@ function App({fetch}) {
                 <Logo setCurrentPage={setCurrentPage}/>      
 
                 <Switch>
+                  <Route path='/Ships-Proj' exact >
+                      <Redirect
+                        to={{
+                          pathname: "/",
+                        }}
+                      />
+                    </Route>
+                  
                     <Route path='/' exact>
                         <MainCommponent noResults={noResults} 
                                         currentShips={currentShips} 
