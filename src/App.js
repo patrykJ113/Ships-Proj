@@ -41,7 +41,7 @@ function App({fetch}) {
             <div className='MainContainer'>
                 <Logo setCurrentPage={setCurrentPage}/>      
 
-                <Switch>
+                {/* <Switch> */}
                   <Route path='/Ships-Proj' exact >
                       <Redirect
                         to={{
@@ -76,7 +76,7 @@ function App({fetch}) {
                       <NoResults/>
                     </Route>
 
-                </Switch>
+                {/* </Switch> */}
                 
                 
                 <FavoriteButton/>
