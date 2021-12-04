@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter , Route , Switch , Redirect} from 'react-router-dom';
+import { BrowserRouter , Route , Switch , Redirect , HashRouter } from 'react-router-dom';
 import { connect , useSelector } from 'react-redux';
 
 import { fetch } from './Redux/Ships/ShipActions'
@@ -41,7 +41,7 @@ function App({fetch}) {
             <div className='MainContainer'>
                 <Logo setCurrentPage={setCurrentPage}/>      
 
-                <Switch>
+                <HashRouter >
                   <Route path='/Ships-Proj' exact >
                       <Redirect
                         to={{
@@ -76,7 +76,7 @@ function App({fetch}) {
                       <NoResults/>
                     </Route>
 
-                </Switch>
+                </HashRouter >
                 
                 
                 <FavoriteButton/>
