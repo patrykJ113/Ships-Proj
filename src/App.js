@@ -36,12 +36,12 @@ function App({fetch}) {
   const paginate = pageNumber => setCurrentPage(pageNumber) ;
 
   return (
-    <BrowserRouter>
+    <HashRouter>
         <div className="App">
             <div className='MainContainer'>
                 <Logo setCurrentPage={setCurrentPage}/>      
 
-                <HashRouter >
+                <Switch>
                   <Route path='/Ships-Proj' exact >
                       <Redirect
                         to={{
@@ -76,13 +76,13 @@ function App({fetch}) {
                       <NoResults/>
                     </Route>
 
-                </HashRouter >
+                </Switch>
                 
                 
                 <FavoriteButton/>
             </div>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
