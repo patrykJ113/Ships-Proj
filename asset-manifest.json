@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Ships-Proj/static/css/main.9a32765b.chunk.css",
-    "main.js": "/Ships-Proj/static/js/main.ebe5baed.chunk.js",
-    "main.js.map": "/Ships-Proj/static/js/main.ebe5baed.chunk.js.map",
+    "main.js": "/Ships-Proj/static/js/main.9865a9a7.chunk.js",
+    "main.js.map": "/Ships-Proj/static/js/main.9865a9a7.chunk.js.map",
     "runtime-main.js": "/Ships-Proj/static/js/runtime-main.bc8f0906.js",
     "runtime-main.js.map": "/Ships-Proj/static/js/runtime-main.bc8f0906.js.map",
-    "static/js/2.21473511.chunk.js": "/Ships-Proj/static/js/2.21473511.chunk.js",
-    "static/js/2.21473511.chunk.js.map": "/Ships-Proj/static/js/2.21473511.chunk.js.map",
+    "static/js/2.1c952f89.chunk.js": "/Ships-Proj/static/js/2.1c952f89.chunk.js",
+    "static/js/2.1c952f89.chunk.js.map": "/Ships-Proj/static/js/2.1c952f89.chunk.js.map",
     "static/js/3.4b8f632a.chunk.js": "/Ships-Proj/static/js/3.4b8f632a.chunk.js",
     "static/js/3.4b8f632a.chunk.js.map": "/Ships-Proj/static/js/3.4b8f632a.chunk.js.map",
     "index.html": "/Ships-Proj/index.html",
     "static/css/main.9a32765b.chunk.css.map": "/Ships-Proj/static/css/main.9a32765b.chunk.css.map",
-    "static/js/2.21473511.chunk.js.LICENSE.txt": "/Ships-Proj/static/js/2.21473511.chunk.js.LICENSE.txt",
+    "static/js/2.1c952f89.chunk.js.LICENSE.txt": "/Ships-Proj/static/js/2.1c952f89.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Ships-Proj/static/media/bg.f09a788c.png",
     "static/media/header-brand-logo.8b14383e.svg": "/Ships-Proj/static/media/header-brand-logo.8b14383e.svg",
     "static/media/sad.099a8ba4.svg": "/Ships-Proj/static/media/sad.099a8ba4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bc8f0906.js",
-    "static/js/2.21473511.chunk.js",
+    "static/js/2.1c952f89.chunk.js",
     "static/css/main.9a32765b.chunk.css",
-    "static/js/main.ebe5baed.chunk.js"
+    "static/js/main.9865a9a7.chunk.js"
   ]
 }
