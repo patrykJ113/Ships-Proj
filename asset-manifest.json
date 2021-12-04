@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ships-Proj/static/css/main.9a32765b.chunk.css",
-    "main.js": "/Ships-Proj/static/js/main.bfaa18f1.chunk.js",
-    "main.js.map": "/Ships-Proj/static/js/main.bfaa18f1.chunk.js.map",
+    "main.js": "/Ships-Proj/static/js/main.ebe5baed.chunk.js",
+    "main.js.map": "/Ships-Proj/static/js/main.ebe5baed.chunk.js.map",
     "runtime-main.js": "/Ships-Proj/static/js/runtime-main.bc8f0906.js",
     "runtime-main.js.map": "/Ships-Proj/static/js/runtime-main.bc8f0906.js.map",
     "static/js/2.21473511.chunk.js": "/Ships-Proj/static/js/2.21473511.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.bc8f0906.js",
     "static/js/2.21473511.chunk.js",
     "static/css/main.9a32765b.chunk.css",
-    "static/js/main.bfaa18f1.chunk.js"
+    "static/js/main.ebe5baed.chunk.js"
   ]
 }
