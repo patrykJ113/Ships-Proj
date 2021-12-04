@@ -72,9 +72,9 @@ function App({fetch}) {
                         </MainCommponent>
                     </Route>
 
-                    {/* <Route path="*">
+                    <Route path="*">
                       <NoResults/>
-                    </Route> */}
+                    </Route>
 
                 </Switch>
                 
