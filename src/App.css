@@ -12,7 +12,7 @@ body{
 }
 
 html {
-  background:
+  /* background:
         linear-gradient(
           rgba(0, 0, 0, 0.3), 
           rgba(0, 0, 0, 0.3)
@@ -21,7 +21,8 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 0px 0px;
+  background-position: 0px 0px; */
+  background-image: linear-gradient(to right top, #702963, #78287a, #7a2b95, #7333b3, #5d3fd3);
 
 }
 
